@@ -34,7 +34,6 @@ public class App {
             gameController.makeMove(game);
         }
         //if im here game state is not in progress
-
         if (GameState.SUCCESS.equals(game.getGameState())){
             System.out.println(game.getWinner().getName()+", Congrats! You are the Winner :) -- ");
 
@@ -42,6 +41,5 @@ public class App {
         if (GameState.DRAWN.equals(game.getGameState())){
             System.out.println("Match tied :| ");
         }
-
     }
 }

@@ -7,5 +7,6 @@ public class MediumBotPlayingStrategy implements BotPlayingStrategy{
     @Override
     public Cell makeMOve(Board board) {
         return null;
+
     }
 }
