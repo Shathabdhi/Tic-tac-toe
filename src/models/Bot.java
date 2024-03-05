@@ -21,7 +21,4 @@ public class Bot extends Player {
         cell.setPlayer(this);
         return cell;
     }
-
-
-
 }

@@ -32,6 +32,7 @@ public class ColWinningStrategy implements WiningStrategy{
 
         //check if the symbol of count has reached the size of the board
         if(board.getBoard().size()==(colMap.get(symbol))){
+            System.out.println("Winning via "+col);
             return true;
         }
         return false;

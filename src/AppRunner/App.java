@@ -36,7 +36,6 @@ public class App {
         //if im here game state is not in progress
         if (GameState.SUCCESS.equals(game.getGameState())){
             System.out.println(game.getWinner().getName()+", Congrats! You are the Winner :) -- ");
-
         }
         if (GameState.DRAWN.equals(game.getGameState())){
             System.out.println("Match tied :| ");
