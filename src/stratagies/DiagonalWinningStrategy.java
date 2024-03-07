@@ -20,10 +20,10 @@ public class DiagonalWinningStrategy implements WiningStrategy{
         //check if cell is part of left diagonal
         if (row == col){
             //check if this symbol is comming for the first time in left diagonal
-            if (leftDiagonalMap.containsKey(symbol)){
+            if (!leftDiagonalMap.containsKey(symbol)){
                 leftDiagonalMap.put(symbol,0);
             }
-            leftDiagonalMap.put(symbol, leftDiagonalMap.getOrDefault(symbol,0)+1);
+            leftDiagonalMap.put(symbol, leftDiagonalMap.get(symbol)+1);
             // check if the count of current symbol is same as size of board
             if (board.getDimension()==leftDiagonalMap.get(symbol)){
                 System.out.println("Winning via left diag");
@@ -37,7 +37,7 @@ public class DiagonalWinningStrategy implements WiningStrategy{
                 rightDiagonalMap.put(symbol,0);
             }
 
-            rightDiagonalMap.put(symbol, rightDiagonalMap.getOrDefault(symbol,0)+1);
+            rightDiagonalMap.put(symbol, rightDiagonalMap.get(symbol)+1);
             // check if the count of current symbol is same as size of board
             if(board.getDimension()==rightDiagonalMap.get(symbol)){
                 System.out.println("Winning via right diag");

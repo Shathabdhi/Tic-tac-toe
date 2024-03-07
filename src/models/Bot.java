@@ -15,7 +15,7 @@ public class Bot extends Player {
     }
     @Override
     public Cell makeMove(Board board) {
-        System.out.println("Get Ready for Sede-Sisya's Move ");
+        System.out.println("Get Ready for Bot ︻┻┳══━一 Move ");
         Cell cell = botPlayingStrategy.makeMOve(board);
         cell.setCellState(CellState.FILLED);
         cell.setPlayer(this);

@@ -12,17 +12,22 @@ import stratagies.WiningStrategy;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws PlayerCountMissmatchException, DuplicateSymbolException, MoreThanOneBotException {
         GameController gameController = new GameController();
-
-        int dimensions = 3;
+        Scanner scn = new Scanner(System.in);
+        System.out.println();
+        System.out.println("Enter the dimension");
+        int dimensions = scn.nextInt();
         List<Player> playerList = new ArrayList<>();
         List<WiningStrategy> winningStrategies = new ArrayList<>();
 
-        playerList.add(new Player('X',"Shathabdhi",1, PlayerType.HUMAN));
-        playerList.add(new Bot('0',"GPT",2, PlayerType.BOT, BotDifficultyLevel.EASY));
+        System.out.println("Please enter your name");
+        String name = scn.next();
+        playerList.add(new Player('X',name,1, PlayerType.HUMAN));
+        playerList.add(new Bot('0',"BOT",2, PlayerType.BOT, BotDifficultyLevel.EASY));
 
         winningStrategies.add(new RowWinningStrategy());
         winningStrategies.add(new ColWinningStrategy());
@@ -35,7 +40,7 @@ public class App {
         }
         //if im here game state is not in progress
         if (GameState.SUCCESS.equals(game.getGameState())){
-            System.out.println(game.getWinner().getName()+", Congrats! You are the Winner :) -- ");
+            System.out.println(game.getWinner().getName()+", Congrats! You are the Winner ε(´｡•᎑•`)っ \uD83D\uDC95 ");
         }
         if (GameState.DRAWN.equals(game.getGameState())){
             System.out.println("Match tied :| ");

@@ -53,7 +53,7 @@ public class Player {
     private PlayerType playertype;
 
     public Cell makeMove(Board board) {
-        System.out.println(this.name+", It's your turn to make the move, enter row and col");
+        System.out.println(this.name+", It's your turn to make the move (◣_◢), enter row and col");
         int row = scanner.nextInt();
         int col = scanner.nextInt();
 
